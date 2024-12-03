@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>Detalles del Clima</h3>
+    
+    <!-- Selector de fecha -->
+    <label for="date">Seleccionar Fecha:</label>
+    <mat-form-field appearance="fill">
+        <mat-label>Seleccionar Fecha</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+    
+    <!-- Mostrar resultados del clima -->
+    <div *ngIf="weatherData" class="weather-details">
+      <h4>{{ weatherData.location.name }} - {{ weatherData.location.country }}</h4>
+      <p class="temperature">{{ weatherData.current.temp_c }} °C</p>
+      <p class="condition">{{ weatherData.current.condition.text }}</p>
+      <p>Humedad: {{ weatherData.current.humidity }}%</p>
+      <p>Viento: {{ weatherData.current.wind_kph }} km/h</p>
+    </div>
+  
+    <div *ngIf="historicalData">
+      <h4>Datos Históricos</h4>
+      <div *ngIf="historicalData">
+        <p class="temperature">{{ historicalData.temperature }} °C</p>
+        <p class="condition">{{ historicalData.condition }}</p>
+        <p>Humedad: {{ historicalData.humidity }}%</p>
+        <p>Viento: {{ historicalData.wind }} km/h</p>
+      </div>
+    </div>
+  </div>
+  

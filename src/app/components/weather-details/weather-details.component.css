@@ -1,0 +1,15 @@
+/* Estilo básico para el input de fecha */
+input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 200px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  

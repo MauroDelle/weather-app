@@ -1,0 +1,39 @@
+<!-- city-search.component.html -->
+<div>
+    <h2>Buscar Ciudad</h2>
+    <input [(ngModel)]="city" placeholder="Escribe el nombre de la ciudad">
+    <button (click)="searchCity()">Buscar</button>
+  
+    <div *ngIf="cityResults.length > 0">
+      <h3>Resultados de Búsqueda</h3>
+      <ul>
+        <li *ngFor="let result of cityResults" (click)="showWeatherDetails(result.name)">
+          {{ result.name }}
+        </li>
+      </ul>
+    </div>
+  
+    <div *ngIf="weatherDetails">
+      <h3>Detalles del Clima Actual</h3>
+      <p>Temperatura: {{ weatherDetails.current.temp_c }} °C</p>
+      <p>Condición: {{ weatherDetails.current.condition.text }}</p>
+      <p>Humedad: {{ weatherDetails.current.humidity }}%</p>
+      <p>Viento: {{ weatherDetails.current.wind_kph }} km/h</p>
+    </div>
+  
+    <div *ngIf="forecastData">
+      <h3>Pronóstico para los próximos 5 días</h3>
+      <div *ngFor="let day of forecastData">
+        <h4>{{ day.date }}</h4>
+        <p>Max Temp: {{ day.day.maxtemp_c }} °C</p>
+        <p>Min Temp: {{ day.day.mintemp_c }} °C</p>
+        <p>Condición: {{ day.day.condition.text }}</p>
+        <p>Precipitación: {{ day.day.totalprecip_mm }} mm</p>
+      </div>
+    </div>
+  
+    <div *ngIf="errorMessage" class="error">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  
