@@ -120,6 +120,26 @@ body {
     text-align: center;
   }
   
+  .close-btn {
+    background-color: #00706b; /* Color de fondo */
+    color: white;
+    border: none;
+    width: 30px; /* Ancho fijo para hacerlo más cuadrado */
+    height: 30px; /* Altura fija para hacerlo cuadrado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 10px; /* Fuente más pequeña */
+    display: flex; /* Usamos flexbox para centrar el texto */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    margin-bottom: 5px; /* Menos margen */
+  }
+  
+  .close-btn:hover {
+    background-color: #01312f; /* Rojo más oscuro */
+  }
+  
+
 
   .forecast-info {
     margin-top: 20px;
