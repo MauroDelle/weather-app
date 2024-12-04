@@ -1,9 +1,31 @@
 Simple app de clima, mostrando proyeccion a 5 dias entre otras cosas.
 
+Se trata de crear una App que muestre los datos del clima utilizando la API del sitio web
+MetaWeather.
+La URL con la documentación de la API está en https://www.metaweather.com/api/
+Puntos a desarrollar:
+ Buscador de ciudades. Se debe implementar un buscador en forma de input de texto y
+mostrar los resultados. O bien usar un campo tipo “auto-complete”, un combo o lo que el
+candidato crea conveniente.
+ Una vez seleccionada una ciudad, consultar los siguientes datos del día actual:
+o Temperatura máxima y mínima
+o Humedad
+o Probabilidad de lluvias (predictability)
+ Mostrar los datos de los próximos 5 días
+Extras:
+ La API soporta búsquedas históricas. Implementar un selector de fechas y efectuar esa
+búsqueda y mostrar los resultados
+o Tomar solamente el primer resultado obtenido (vienen varias predicciones con cada
+request) y mostrar en pantalla los mismos datos del punto anterior.
+ Como mejora, guardar en caché las consultas realizadas y devolverlas en caso de que ya
+existan. La duración del caché es de 2 minutos (para simular su funcionamiento). Nota: no se
+apunta a la utilización de la API de caché de los service workers, si no a implementar a mano
+una solución sencilla.
+![alt text](image.png)
 
+![alt text](image-1.png)
 
-
-
+![alt text](image-2.png)
 
 # WeatherApp
 
