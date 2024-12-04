@@ -1,10 +1,9 @@
-<!-- city-search.component.html -->
-<div>
+<div class="container">
     <h2>Buscar Ciudad</h2>
     <input [(ngModel)]="city" placeholder="Escribe el nombre de la ciudad">
     <button (click)="searchCity()">Buscar</button>
   
-    <div *ngIf="cityResults.length > 0">
+    <div *ngIf="cityResults.length > 0" class="weather-info">
       <h3>Resultados de Búsqueda</h3>
       <ul>
         <li *ngFor="let result of cityResults" (click)="showWeatherDetails(result.name)">
@@ -13,7 +12,7 @@
       </ul>
     </div>
   
-    <div *ngIf="weatherDetails">
+    <div *ngIf="weatherDetails" class="weather-info">
       <h3>Detalles del Clima Actual</h3>
       <p>Temperatura: {{ weatherDetails.current.temp_c }} °C</p>
       <p>Condición: {{ weatherDetails.current.condition.text }}</p>
@@ -21,7 +20,7 @@
       <p>Viento: {{ weatherDetails.current.wind_kph }} km/h</p>
     </div>
   
-    <div *ngIf="forecastData">
+    <div *ngIf="forecastData" class="forecast-info">
       <h3>Pronóstico para los próximos 5 días</h3>
       <div *ngFor="let day of forecastData">
         <h4>{{ day.date }}</h4>
@@ -32,8 +31,24 @@
       </div>
     </div>
   
-    <div *ngIf="errorMessage" class="error">
-      <p>{{ errorMessage }}</p>
+  
+    <div class="historical-info">
+      <h2>Búsqueda Histórica</h2>
+      <input [(ngModel)]="cityName" placeholder="Escribe el nombre de la ciudad" />
+      <input type="date" [(ngModel)]="historicalDate" />
+      <button (click)="searchHistoricalWeather()">Buscar Historial</button>
+  
+      <div *ngIf="historicalData">
+        <h3>Datos Históricos</h3>
+        <p>Temperatura: {{ historicalData.temperature }} °C</p>
+        <p>Condición: {{ historicalData.condition }}</p>
+        <p>Humedad: {{ historicalData.humidity }}%</p>
+        <p>Viento: {{ historicalData.wind }} km/h</p>
+      </div>
+  
+      <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+      </div>
     </div>
   </div>
   

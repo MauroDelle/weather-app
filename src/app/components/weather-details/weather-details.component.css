@@ -1,15 +1,23 @@
-/* Estilo básico para el input de fecha */
-input[type="date"] {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 10px;
-    width: 200px;
+.container {
+    margin: 20px;
   }
   
-  label {
-    font-size: 16px;
-    margin-right: 10px;
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .weather-details {
+    margin-top: 20px;
+  }
+  
+  .temperature {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .condition {
+    font-size: 1.2rem;
+    color: #555;
   }
   
