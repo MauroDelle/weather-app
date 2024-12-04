@@ -1,26 +1,15 @@
-Simple app de clima, mostrando proyeccion a 5 dias entre otras cosas.
+Esta aplicación está construida con Angular como framework principal, utilizando TypeScript y RxJS para el manejo de datos reactivos. 
+Consume datos de la API de WeatherAPI a través de servicios HTTP proporcionados por HttpClient de Angular.
 
-Se trata de crear una App que muestre los datos del clima utilizando la API del sitio web
-MetaWeather.
-La URL con la documentación de la API está en https://www.metaweather.com/api/
-Puntos a desarrollar:
- Buscador de ciudades. Se debe implementar un buscador en forma de input de texto y
-mostrar los resultados. O bien usar un campo tipo “auto-complete”, un combo o lo que el
-candidato crea conveniente.
- Una vez seleccionada una ciudad, consultar los siguientes datos del día actual:
-o Temperatura máxima y mínima
-o Humedad
-o Probabilidad de lluvias (predictability)
- Mostrar los datos de los próximos 5 días
-Extras:
- La API soporta búsquedas históricas. Implementar un selector de fechas y efectuar esa
-búsqueda y mostrar los resultados
-o Tomar solamente el primer resultado obtenido (vienen varias predicciones con cada
-request) y mostrar en pantalla los mismos datos del punto anterior.
- Como mejora, guardar en caché las consultas realizadas y devolverlas en caso de que ya
-existan. La duración del caché es de 2 minutos (para simular su funcionamiento). Nota: no se
-apunta a la utilización de la API de caché de los service workers, si no a implementar a mano
-una solución sencilla.
+Tecnologías usadas:
+Angular: Desarrollo del frontend.
+RxJS: Gestión de flujos de datos asíncronos.
+WeatherAPI: Proveedor de datos meteorológicos (API REST).
+CSS: Estilización de componentes.
+TypeScript: Lenguaje de programación principal.
+
+La aplicación permite buscar ciudades, consultar el clima actual, ver el pronóstico meteorológico a 5 días, y acceder a datos históricos del clima para una fecha específica. Incluye almacenamiento en caché en memoria para optimizar las consultas repetidas.
+
 ![alt text](image.png)
 
 ![alt text](image-1.png)
