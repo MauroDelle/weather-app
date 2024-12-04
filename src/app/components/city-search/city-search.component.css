@@ -2,10 +2,10 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
+    background-color: #2b649c;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-image: url('/src/assets/fondo.jpg');
   }
   
   /* Contenedor principal */
@@ -13,9 +13,8 @@ body {
     width: 80%;
     max-width: 1200px;
     margin: 30px auto;
-    background-image: url('/src/app/assets/fondo.jpg'); /* Ruta relativa */
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.55); /* Fondo blanco con opacidad del 80% */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -69,7 +68,7 @@ body {
   }
   
   button:hover {
-    background-color: #2980b9;
+    background-color: rgb(43, 206, 247);
   }
   
   /* Estilo para las listas y elementos de la interfaz */
@@ -100,6 +99,13 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
+.historical-info{
+  background-color: rgba(255, 255, 255, -1); 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
   .weather-info p, .forecast-info p, .historical-info p {
     margin: 5px 0;
   }
@@ -112,5 +118,39 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     text-align: center;
+  }
+  
+
+  .forecast-info {
+    margin-top: 20px;
+  }
+  
+  .forecast-container {
+    display: flex;
+    justify-content: space-around; /* Espacio entre las cajas */
+    gap: 20px; /* Espacio entre las cajas */
+    flex-wrap: wrap; /* Permite que las cajas se ajusten en pantallas pequeñas */
+  }
+  
+  .forecast-box {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 15px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 18%; /* Ancho de cada caja */
+    min-width: 250px; /* Ancho mínimo para evitar que las cajas sean demasiado pequeñas */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio debajo de las cajas */
+  }
+  
+  .forecast-box h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .forecast-box p {
+    margin: 5px 0;
+    color: #555;
   }
   

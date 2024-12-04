@@ -22,15 +22,17 @@
   
     <div *ngIf="forecastData" class="forecast-info">
       <h3>Pronóstico para los próximos 5 días</h3>
-      <div *ngFor="let day of forecastData">
-        <h4>{{ day.date }}</h4>
-        <p>Max Temp: {{ day.day.maxtemp_c }} °C</p>
-        <p>Min Temp: {{ day.day.mintemp_c }} °C</p>
-        <p>Condición: {{ day.day.condition.text }}</p>
-        <p>Precipitación: {{ day.day.totalprecip_mm }} mm</p>
+      <div class="forecast-container">
+        <div *ngFor="let day of forecastData" class="forecast-box">
+          <h4>{{ day.date }}</h4>
+          <p>Max Temp: {{ day.day.maxtemp_c }} °C</p>
+          <p>Min Temp: {{ day.day.mintemp_c }} °C</p>
+          <p>Condición: {{ day.day.condition.text }}</p>
+          <p>Precipitación: {{ day.day.totalprecip_mm }} mm</p>
+        </div>
       </div>
     </div>
-  
+    
   
     <div class="historical-info">
       <h2>Búsqueda Histórica</h2>
@@ -50,5 +52,5 @@
         <p>{{ errorMessage }}</p>
       </div>
     </div>
-  </div>
+</div>
   

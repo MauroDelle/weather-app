@@ -11,8 +11,6 @@ export class WeatherService {
   private baseUrl = 'https://api.weatherapi.com/v1';
 
 
-
-
   constructor(private http: HttpClient) {}
 
   // Método para obtener el clima actual de la ciudad
