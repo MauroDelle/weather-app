@@ -3,9 +3,13 @@ Consume datos de la API de WeatherAPI a través de servicios HTTP proporcionados
 
 Tecnologías usadas:
 Angular: Desarrollo del frontend.
+------------------------------------------------
 RxJS: Gestión de flujos de datos asíncronos.
+------------------------------------------------
 WeatherAPI: Proveedor de datos meteorológicos (API REST).
+------------------------------------------------
 CSS: Estilización de componentes.
+------------------------------------------------
 TypeScript: Lenguaje de programación principal.
 
 La aplicación permite buscar ciudades, consultar el clima actual, ver el pronóstico meteorológico a 5 días, y acceder a datos históricos del clima para una fecha específica. Incluye almacenamiento en caché en memoria para optimizar las consultas repetidas.
